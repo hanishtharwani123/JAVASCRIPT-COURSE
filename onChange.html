@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+            background: rgb(255, 106, 0);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        label {
+            font-size: 30px;
+            color: #fff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        input {
+            padding: 10px 30px;
+            outline: none;
+            font-size: 20px;
+        }
+
+        select {
+            width: 204px;
+            height: 46px;
+            font-size: 19px;
+            padding: 0px 23px;
+            cursor: pointer;
+        }
+
+        #result {
+            font-size: 30px;
+            color: rgb(0, 0, 0);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="card">
+            <label for="">YOUR NAME 👉</label>
+            <input type="text" id="ice" name="">
+            <br>
+            <label>CHOOSE AN ICE CREAM FLAVOUR ⭐
+                <select name="iceCreams" id="iceCreams" onchange="selectElement()">
+                    <option value="">Select One...</option>
+                    <option value="chocolate">Chocolate</option>
+                    <option value="sardine">Sardine</option>
+                    <option value="vanilla">Vanilla.</option>
+                </select>
+            </label>
+            <br>
+            <div id="result"></div>
+        </div>
+    </div>
+
+    <script>
+        const selectElement = () => {
+            const inputChange = document.getElementById('ice').value;
+            const iceCreams = document.getElementById('iceCreams').value;
+            const result = document.getElementById('result').innerHTML = `Mr ${inputChange} select ${iceCreams} ice-cream flavours`
+
+
+        }
+    </script>
+</body>
+
+</html>

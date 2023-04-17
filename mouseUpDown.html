@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        width: 100%;
+        height: 100vh;
+        background: rgb(3, 3, 94);
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+
+    p {
+        font-size: 35px;
+        color: rgb(72, 255, 0);
+        width: 700px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: bold;
+    }
+</style>
+
+<body>
+    <p id="myP" onmousedown="mouseDown()" onmouseup="mouseUp()">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Maiores quasi nostrum eos, eum ad velit eveniet
+        suscipit temporibus commodi assumenda vitae? Atque consequuntur nobis magni sint eius maiores necessitatibus est
+        quidem sed, aspernatur commodi.</p>
+
+    <script>
+        function mouseDown() {
+            document.getElementById("myP").style.color = "red";
+        }
+        function mouseUp() {
+            document.getElementById("myP").style.color = "yellow";
+        }
+
+        // const mEnter = document.getElementById("myP");
+        // mEnter.addEventListener('mouseenter', () => {
+        //     console.log('Mouse Enter');
+        //     m.Enter.style.color = 'white';
+        // })
+
+        // mEnter.addEventListener('mouseleave', () => {
+        //     console.log('Mouse leave');
+        //     m.Enter.style.color = 'purple';
+        // })
+
+
+    </script>
+</body>
+
+</html>

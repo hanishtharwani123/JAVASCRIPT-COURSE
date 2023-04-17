@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        width: 100%;
+        height: 100vh;
+        background: rgb(3, 3, 94);
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        padding: 49px;
+    }
+
+    button {
+        background: rgb(255, 7, 177);
+        border: none;
+        padding: 20px 48px;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 24px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: bold;
+        color: #fff;
+    }
+</style>
+
+<body>
+    <button id="btn1" onclick="firstFunction()">BUTTON 1</button>
+    <button id="btn2" onclick="alert('Hello Everyon second times 🤣🤣')">BUTTON 2</button>
+    <button id="btn3">BUTTON 3</button>
+    <button id="btn4">BUTTON 4</button>
+
+    <script>
+        const firstFunction = () => {
+            alert("Hello Everyone 😁😁")
+        }
+
+        const btn3 = document.getElementById("btn3");
+        // THIS FUN WILL OVERRIDE
+        btn3.onclick = function () {
+            alert("Hello Everyone third times 😁😁")
+        }
+        btn3.onclick = function () {
+            console.log("Hello Everyone third times 😁😁");
+        }
+
+        const btn4 = document.querySelector('#btn4');
+        btn4.addEventListener('click', () => {
+            alert("Hello Everyone fourth times 😁😁")
+        })
+        btn4.addEventListener('click', () => {
+            console.log("Hello Everyone fourth times 😁😁");
+        })
+    </script>
+</body>
+
+</html>

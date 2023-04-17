@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+            background: rgb(12, 227, 255);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        input {
+            padding: 20px 20px;
+            width: 600px;
+            background: rgb(237, 252, 68);
+            border: 2px solid rgb(0, 0, 0);
+            font-size: 20px;
+            outline: none;
+        }
+
+        #show {
+            font-size: 35px;
+            color: rgb(108, 3, 3);
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="pro">
+        <input type="text" onkeypress="keyPress()">
+        <p id="show"></p>
+    </div>
+
+    <script>
+        function keyPress() {
+            document.getElementById("show").innerHTML = `You have press ${event.key} and it's code is ${event.code}`;
+        }
+    </script>
+</body>
+
+</html>

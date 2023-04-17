@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+            background-color: rgb(255, 0, 204);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .parentDiv {
+            width: 470px;
+            height: 470px;
+            border: 5px solid black;
+            background: rgb(255, 49, 49);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .childDiv {
+            width: 250px;
+            height: 250px;
+            background: yellow;
+            border: 5px solid black;
+            cursor: pointer;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parentDiv" id="parentId">
+        <div class="childDiv" id="childId"></div>
+    </div>
+
+    <!-- BY DEFAULT EVENT BUBBLING -->
+
+    <script>
+        let parent = document.getElementById('parentId');
+        let child = document.getElementById('childId');
+
+        const parentCall = () => {
+            alert('Parent div call');
+        }
+
+        const childCall = () => {
+            alert('Child div call');
+            // event.stopPropagation();
+        }
+
+        // capturing phase
+        parent.addEventListener('click', parentCall, true);
+        child.addEventListener('click', childCall, true);
+    </script>
+</body>
+
+</html>
