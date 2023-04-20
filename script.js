@@ -536,8 +536,6 @@
 // var names;
 // names = "hanish";
 
-// HOW IT WILL BE IN OUTPUT DURING CREATION PHASE
-
 // LEXICAL SCOPING
 // let a = "hello"; // GLOBAL SCOPE
 // const first = () => {
